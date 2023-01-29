@@ -11,6 +11,11 @@
     <div>
     
     </div>
+        <asp:DropDownList ID="DropDownList1" runat="server" Height="20px" Width="134px">
+            <asp:ListItem></asp:ListItem>
+            <asp:ListItem>Activo</asp:ListItem>
+            <asp:ListItem>Pasivo</asp:ListItem>
+        </asp:DropDownList>
     </form>
 </body>
 </html>

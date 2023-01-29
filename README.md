@@ -34,7 +34,25 @@ Password: Itq_2023
 
 Sitio GitHub con el código: <https://github.com/vmejiaec/SA-ITQ>
 
-# Periodos académicos
+# Ejecución del código en Visual Studio 2015
+
+Para ejecutar el código localmente en tu computadora, debes clonar el repositorio y 
+luego buscar el archivo "sistema.sln". Al abrir el archivo el VS2015 presentará todas 
+las pantallas del proyecto. Con pulsar en el botón "run" se inicia la ejecución de la
+aplicación web
+
+![VS2015 Open](media/VSOpen.png)
+
+![VS2015 Run](media/VSRun.png)
+
+# Usuario del Sistema Académico para pruebas
+
+usuario: desa
+password: desa
+
+![Usuario para pruebas](media/SA-ITQ-Login.png)
+
+# Creación de periodos académicos
 
 ## Pantalla: PeriodosAcademicos.aspx
 
@@ -44,7 +62,7 @@ Agregar los campos de  fecha de inicio y final del período de matrículas, para
 
 Fecha_Inicio_Matriculas, Fecha_Fin_Matriculas
 
-# Asignaturas
+# Creación de Asignaturas
 
 ## Pantalla: IngresarMaterias.aspx
 
@@ -52,13 +70,13 @@ Fecha_Inicio_Matriculas, Fecha_Fin_Matriculas
 
 Agregar la opción de añadir el número de horas a elegir entre los valores de 36 o 64, y el cálculo del valor del crédito, como resultado de la operación con los datos del valor hora y el número de horas.
 
-# Días para la matrícula
+# Crear días para la matrícula
 
 ## Pantalla: IngresoDiasMatricula.aspx
 
 ![Tabla Descripción generada automáticamente](media/389ea91a658cc6bd2ebf1688402ab77a.png)
 
-Permitir elegir los estados entre una lista que tenga las opciones A – Activo, P – Pasivo
+Permitir elegir los estados entre una lista desplegable que tenga las opciones A – Activo, P – Pasivo
 
 # Registro en línea de la matrícula de inglés
 
@@ -68,7 +86,7 @@ Permitir elegir los estados entre una lista que tenga las opciones A – Activo,
 
 Esta pantalla debe consulta a la base, a la tabla de períodos académicos, para saber si existe un período de matrículas vigente a la fecha actual, si es así, debe permitir continuar con un mensaje que indique las fechas de inicio y fin del período de matrículas; y, caso contrario, que presente la información de las fechas, pero con el aviso que el período a vencido y no permita utilizar la pantalla.
 
-# Profesor nuevo
+# Creación de un profesor nuevo
 
 ## Pantalla: IngNuevoDocente.aspx
 
