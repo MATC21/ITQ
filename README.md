@@ -40,7 +40,7 @@ Sitio GitHub con el código: <https://github.com/vmejiaec/SA-ITQ>
 
 ![Interfaz de usuario gráfica, Tabla Descripción generada automáticamente con confianza media](media/5b451309ba8912232d7bed64e3649372.png)
 
-Agregar la fecha de inicio y final del período de matrículas
+Agregar los campos de  fecha de inicio y final del período de matrículas, para guardar el período de matriculación permitido. Hay que tomar en cuenta que debemos almacenar esta información en la base de datos. Los campos en la base se llamarán:
 
 Fecha_Inicio_Matriculas, Fecha_Fin_Matriculas
 
