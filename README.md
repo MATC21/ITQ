@@ -2,25 +2,12 @@
 
 ## Contenido
 
-[Periodos académicos](#periodos-académicos)
+1. [Periodos académicos](#periodos-académicos)
+2. [Asignaturas](#asignaturas)
+3. [Días para la matrícula](#días-para-la-matrícula)
+4. [Registro en línea de la matrícula de inglés](#registro-en-línea-de-la-matrícula-de-inglés)
+5. [Profesor nuevo](#profesor-nuevo)
 
-[Pantalla: PeriodosAcademicos.aspx](#pantalla-periodosacademicosaspx)
-
-[Asignaturas](#asignaturas)
-
-[Pantalla: IngresarMaterias.aspx](#pantalla-ingresarmateriasaspx)
-
-[Días para la matrícula](#días-para-la-matrícula)
-
-[Pantalla: IngresoDiasMatricula.aspx](#pantalla-ingresodiasmatriculaaspx)
-
-[Registro en línea de la matrícula de inglés](#registro-en-línea-de-la-matrícula-de-inglés)
-
-[Pantalla: inscripcion.aspx](#pantalla-inscripcionaspx)
-
-[Profesor nuevo](#profesor-nuevo)
-
-[Pantalla: IngNuevoDocente.aspx](#pantalla-ingnuevodocenteaspx)
 
 # Acceso a la base de datos de pruebas
 
