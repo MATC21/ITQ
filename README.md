@@ -1,6 +1,6 @@
-#Ejercicios para la prueba del equipo del Sistema Académico
+# Ejercicios para la prueba del equipo del Sistema Académico
 
-##Contenido
+## Contenido
 
 [Periodos académicos](#periodos-académicos)
 
