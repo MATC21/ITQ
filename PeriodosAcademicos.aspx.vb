@@ -96,7 +96,7 @@ Partial Class PeriodosAcademicos
 
             If Not (fila Is Nothing) Then
                 SqlDataSource1.ConnectionString = ConnectionString
-                SqlDataSource1.UpdateCommand = "UPDATE PERIODO SET NumMatricula=@NumMatricula, ControlPlataforma=@ControlPlataforma,Detalle_Periodo = @Detalle_Periodo,Estado=@Estado,NotaAprobar=@NotaAprobar,VersionCalificacion=@VersionCalificacion WHERE cod_periodo = @cod_periodo "
+                SqlDataSource1.UpdateCommand = "UPDATE PERIODO SET NumMatricula=@NumMatricula, ControlPlataforma=@ControlPlataforma,Detalle_Periodo = @Detalle_Periodo,Estado=@Estado,NotaAprobar=@NotaAprobar,VersionCalificacion=@VersionCalificacion, Fecha_Inicio_Matriculas=@Fecha_Inicio_Matriculas, Fecha_Fin_Matriculas=@Fecha_Fin_Matriculas WHERE cod_periodo = @cod_periodo "
                 SqlDataSource1.UpdateParameters.Add(New Parameter("cod_periodo", TypeCode.Decimal))
                 SqlDataSource1.UpdateParameters.Add(New Parameter("Detalle_Periodo", TypeCode.String))
                 SqlDataSource1.UpdateParameters.Add(New Parameter("Estado", TypeCode.String))
@@ -104,6 +104,10 @@ Partial Class PeriodosAcademicos
                 SqlDataSource1.UpdateParameters.Add(New Parameter("NotaAprobar", TypeCode.Decimal))
                 SqlDataSource1.UpdateParameters.Add(New Parameter("VersionCalificacion", TypeCode.Decimal))
                 SqlDataSource1.UpdateParameters.Add(New Parameter("NumMatricula", TypeCode.Int64))
+
+                SqlDataSource1.UpdateParameters.Add(New Parameter("Fecha_Inicio_Matriculas", TypeCode.DateTime))
+                SqlDataSource1.UpdateParameters.Add(New Parameter("Fecha_Fin_Matriculas", TypeCode.DateTime))
+
 
                 SqlDataSource1.UpdateParameters("cod_periodo").DefaultValue = CType(fila.FindControl("lblCod_Periodo"), Label).Text
                 SqlDataSource1.UpdateParameters("Detalle_Periodo").DefaultValue = CType(fila.FindControl("txtDetalleSave"), TextBox).Text
@@ -117,12 +121,21 @@ Partial Class PeriodosAcademicos
 
                 SqlDataSource1.UpdateParameters("NumMatricula").DefaultValue = s
 
+                Dim Fecha_Inicio As String = CType(fila.FindControl("txtFecha_Inicio_Matriculas"), TextBox).Text
+                Dim Fecha_Fin As String = CType(fila.FindControl("txtFecha_Fin_Matriculas"), TextBox).Text
+
+                Dim dtFecha_Inicio As DateTime = Convert.ToDateTime(Fecha_Inicio)
+                Dim dtFecha_Fin As DateTime = Convert.ToDateTime(Fecha_Fin)
+
+                SqlDataSource1.UpdateParameters("Fecha_Inicio_Matriculas").DefaultValue = dtFecha_Inicio
+                SqlDataSource1.UpdateParameters("Fecha_Fin_Matriculas").DefaultValue = dtFecha_Fin
+
                 SqlDataSource1.Update()
                 GridView1.EditIndex = -1
                 EnlazarDatos()
             End If
         Catch ex As Exception
-
+            lbldatoserroneosOpcional.Text = ex.ToString
         End Try
     End Sub
     Private Sub EnlazarDatos()

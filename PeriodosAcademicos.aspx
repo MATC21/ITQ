@@ -375,6 +375,25 @@
                                             <asp:Label ID="Label30" runat="server" Text='<%# eval("NumMatricula") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
+
+                                    <%--Nuevas columnas--%>
+                                    <asp:TemplateField HeaderText="Fecha Inicio Matrículas">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtFecha_Inicio_Matriculas" runat="server" Text='<%#Eval("Fecha_Inicio_Matriculas") %>' Width="60px"></asp:TextBox>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label31" runat="server" Text='<%#Eval("Fecha_Inicio_Matriculas") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Fecha Fin Matrículas">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtFecha_Fin_Matriculas" runat="server" Text='<%#Eval("Fecha_Fin_Matriculas") %>' Width="60px"></asp:TextBox>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label32" runat="server" Text='<%#Eval("Fecha_Fin_Matriculas") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
                                 </Columns>
                                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
                                 <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
